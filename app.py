@@ -3,10 +3,11 @@ load_dotenv()
 
 import streamlit as st
 import os
-from langchain.llms import OpenAI 
+#from langchain.llms import OpenAI 
+from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 
-def genarate_llm_response(input_text: str, expert_type: str) -> str:
+def generate_llm_response(input_text: str, expert_type: str) -> str:
     if expert_type == "キャリアアドバイザー":
         system_message_content = "あなたはIT業界に特化したキャリアアドバイザーです。ユーザーのキャリアに関する質問に、具体的で前向きなアドバイスを提供してください。"
     elif expert_type == "料理の専門家":
