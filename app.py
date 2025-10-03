@@ -18,8 +18,9 @@ def generate_llm_response(input_text: str, expert_type: str) -> str:
 
     try:
         # Lesson 8を参考にLangChainのChatOpenAIを利用してLLMとやり取り
+        api_key = st.secrets[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]
         # ChatOpenAIは内部で環境変数 OPENAI_API_KEY を参照します
-        llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.7)
+        llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.7, openai_api_key=api_key)
 
         messages = [
             SystemMessage(content=system_message_content),
