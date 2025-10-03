@@ -5,7 +5,7 @@ import streamlit as st
 import os
 #from langchain.llms import OpenAI 
 from langchain_openai import ChatOpenAI
-from langchain.schema import SystemMessage, HumanMessage
+from langchain_core.messages import SystemMessage, HumanMessage
 
 def generate_llm_response(input_text: str, expert_type: str) -> str:
     if expert_type == "キャリアアドバイザー":
